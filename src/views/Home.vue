@@ -1,7 +1,9 @@
 <template>
     <div class="home">
-        <h1>Homepage</h1>
-        <br>
+        <div class="container">
+            <h1>Homepage</h1>
+            <br>
+        </div>
 
 
     </div>
