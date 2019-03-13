@@ -5,18 +5,30 @@
       <h1 class="heading white--text">Team</h1>
 
       <v-container fluid class="my-5">
-        <v-btn class="hidden-md-and-down">click me</v-btn>
 
-        <p class="blue-grey white--text" style="font-size: 19px">
-          Use one of the Vuetify Vue CLI packages (based on the official examples) to get your project started in no time. Vuetify supports SSR (server-side rendering), SPA (single page application), PWA (progressive web application) and standard HTML pages.
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md4 lg3 v-for="person in team" :key="person.name">
+            <v-card flat class="text-xs-center ma-3">
 
-          <br><br>
-          Supported Browsers
-          <br><br>
+              <v-responsive class="pt-4">
+                images
+              </v-responsive>
 
-          Vuetify is a progressive framework that attempts to push web development to the next level. In order to best accomplish this task, some sacrifices had to be made in terms of support for older versions of Internet Explorer. This is not an exhaustive list of compatible browsers, but the main targeted ones.
+              <v-card-text>
+                <div class="subheading">{{ person.name }}</div>
+                <div class="teal--text">{{ person.role }}</div>
+              </v-card-text>
 
-        </p>
+              <v-card-actions>
+                <v-btn flat color="light-green accent-4">
+                  <v-icon small left>message</v-icon>
+                  <span class="text-lowercase">Message</span>
+                </v-btn>
+              </v-card-actions>
+
+            </v-card>
+          </v-flex>
+        </v-layout>
 
       </v-container>
 
@@ -27,6 +39,16 @@
 
 <script>
     export default {
-
+      data(){
+          return{
+              team: [
+                  { name:'Dedsec', role:'System Architecture'},
+                  { name:'Taylor Otwell', role:'Web Developer'},
+                  { name:'Paula Scher', role:'Graphic Designer'},
+                  { name:'Arash', role:'HR Manager'},
+                  { name:'T-bone', role:'Cloud Support Engineer'},
+              ]
+          }
+      }
     }
 </script>

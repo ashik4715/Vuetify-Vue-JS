@@ -1,6 +1,6 @@
 <template>
     <div class="dashboard">
-        <h1 class="subheading white--text">Dashboard</h1>
+        <h1 class="heading white--text">Dashboard</h1>
 
         <v-container fluid class="my-5">
 
