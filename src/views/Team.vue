@@ -11,7 +11,9 @@
             <v-card flat class="text-xs-center ma-3">
 
               <v-responsive class="pt-4">
-                images
+                <v-avatar size="300" class="grey lighten-2">
+                  <img :src="person.avatar" alt="">
+                </v-avatar>
               </v-responsive>
 
               <v-card-text>
@@ -42,11 +44,11 @@
       data(){
           return{
               team: [
-                  { name:'Dedsec', role:'System Architecture'},
-                  { name:'Taylor Otwell', role:'Web Developer'},
-                  { name:'Paula Scher', role:'Graphic Designer'},
-                  { name:'Arash', role:'HR Manager'},
-                  { name:'T-bone', role:'Cloud Support Engineer'},
+                  { name:'Taylor Otwell', role:'Web Developer', avatar:'/avatar-1.jpg'},
+                  { name:'Paula Scher', role:'Graphic Designer', avatar:'/avatar-2.jpg'},
+                  { name:'Yuriy Garnaev', role:'HR Manager', avatar:'/avatar-3.jpg'},
+                  { name:'Karina Carvalho', role:'Cloud Support Engineer', avatar:'/avatar-4.jpg'},
+                  { name:'Brooke Lark ', role:'Photographer', avatar:'/avatar-5.jpg'},
               ]
           }
       }
