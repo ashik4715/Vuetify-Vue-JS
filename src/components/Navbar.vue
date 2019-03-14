@@ -1,8 +1,12 @@
 <template>
     <nav>
+        <v-snackbar v-model="snackbar" :timeout="4000" top color="success">
+            <span>Awesome! You added a new Project !!</span>
+            <v-btn flat color="teal" @click="snackbar = false">Close</v-btn>
+        </v-snackbar>
+
         <v-toolbar flat app>
             <v-toolbar-side-icon class="lime--text" @click="drawer = !drawer">
-
             </v-toolbar-side-icon>
 
             <v-toolbar-title class="text-uppercase purple--text">
@@ -76,7 +80,8 @@
                     {icon: 'person', text: 'Team', route: '/team'},
                     {icon: 'folder', text: 'About', route: '/about'},
                     {icon: 'folder', text: 'visibility', route: '/visibility'},
-                ]
+                ],
+                snackbar :true
             }
 
         }
