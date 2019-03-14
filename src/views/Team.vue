@@ -2,7 +2,7 @@
   <div class="team">
 
     <div class="container">
-      <h1 class="heading white--text">Team</h1>
+      <h2 class="heading white--text">Team</h2>
 
       <v-container fluid class="my-5">
 
